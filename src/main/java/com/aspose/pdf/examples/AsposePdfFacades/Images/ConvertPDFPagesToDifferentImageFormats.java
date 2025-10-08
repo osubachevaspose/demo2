@@ -37,6 +37,7 @@ public class ConvertPDFPagesToDifferentImageFormats {
             int i = 1;
             // check if pages exist and then convert to image one by one
             while (converter.hasNextImage()) {
+                System.out.println("i = " + i);
                 converter.getNextImage(outputDir + i + ".jpg", ImageType.getJpeg());
                 i++;
             }
